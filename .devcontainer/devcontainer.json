@@ -13,7 +13,7 @@
   "features": {
     "ghcr.io/devcontainers/features/java:1": {
       "version": "none",
-      "installMaven": "true",
+      "installMaven": "false",
       "installGradle": "false"
     }
   },
@@ -24,7 +24,7 @@
   // Use 'postCreateCommand' to run commands after the container is created.
   // "postCreateCommand": "java -version",
 
-  "postCreateCommand": "echo '===== Java Version =====' && java -version && echo '\n===== Maven Version =====' && mvn -version",
+  "postCreateCommand": "git config --global --add safe.directory /workspace/app && export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which java)))) && echo '===== Java Version =====' && java -version && echo '\n===== Maven Version =====' && mvn -version",
   // Configure tool-specific properties.
   "customizations" : {
     "jetbrains" : {
