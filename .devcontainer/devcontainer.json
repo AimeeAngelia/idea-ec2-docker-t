@@ -3,7 +3,9 @@
 {
   "name": "Java idea-ec2-docker-t",
   // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-  "image": "mcr.microsoft.com/devcontainers/java:1-25-bullseye",
+  // stable version
+  // "image": "mcr.microsoft.com/devcontainers/java:3.0-25-bookworm",
+  "image": "mcr.microsoft.com/devcontainers/java:25",
 
   "workspaceMount": "source=${localWorkspaceFolder},target=/workspace/app,type=bind",
   "workspaceFolder": "/workspace/app",
